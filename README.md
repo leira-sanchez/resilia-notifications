@@ -13,8 +13,6 @@ It was created with `create-react-app`.
 
 This application uses the localStorage API for simplicity and persistance.
 
-### Seed data
-
 ### Payload
 
 ```
@@ -27,7 +25,7 @@ This application uses the localStorage API for simplicity and persistance.
 }
 ```
 
-Seed data:
+### Seed data:
 
 ```json
 {
