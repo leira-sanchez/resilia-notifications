@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Resilia Notifications by [Leira C Sánchez Quiñones](https://github.com/leira-sanchez)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This application was created for a Software Engineering interview at Resilia.
 
-## Available Scripts
+It was created with `create-react-app`.
 
-In the project directory, you can run:
+## To Run
 
-### `npm start`
+1. `npm i`
+1. `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Notifications API
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This application uses the localStorage API for simplicity and persistance.
 
-### `npm test`
+### Seed data
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Payload
 
-### `npm run build`
+```
+{
+    title: 'title of the notification',
+    date: date emitted,
+    isRead: has it been read,
+    userId: user it belongs to,
+    id: uuid()
+}
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Seed data:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```json
+{
+  "notifications": [
+    {
+      "title": "First notification",
+      "date": "Thu Jul 14 2022 09:38:32",
+      "id": 1,
+      "userId": "uCQOiv"
+    },
+    {
+      "title": "read notification",
+      "date": "Wed Jul 13 2022 10:23:12",
+      "isRead": true,
+      "id": 2,
+      "userId": "uCQOiv"
+    },
+    {
+      "title": "NonProfit for the Profitters just raised $1M from Goldman Sachs!",
+      "date": "Tue Jul 5 2022 09:38:3210",
+      "isRead": true,
+      "id": 3,
+      "userId": "uCQOiv"
+    },
+    {
+      "title": "This NonProfit has invited you to become a monthly donor!",
+      "date": "Fri Jul 1 2022 02:38:32",
+      "isRead": true,
+      "id": 4,
+      "userId": "uCQOiv"
+    },
+    {
+      "title": "Fundraiser for NonProfit A is starting now!",
+      "date": "Fri Jul 1 2022 07:34:10",
+      "isRead": true,
+      "id": 5,
+      "userId": "uCQOiv"
+    }
+  ]
+}
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Frontend
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Uses React as the framework/library and Styled-Components for styling. All is written in `App.js` but in the real world, it would be separated by component. Each component being its own file.
